@@ -1,6 +1,5 @@
 import os
 import requests
-import asyncio
 import ffmpeg # ✅ Added for silence trimming
 from mutagen.wave import WAVE
 

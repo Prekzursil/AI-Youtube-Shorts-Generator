@@ -1,7 +1,5 @@
-import os
 import json
 from google import genai
-from dotenv import load_dotenv
 
 # Load API Key
 client = genai.Client(api_key="api-key")
