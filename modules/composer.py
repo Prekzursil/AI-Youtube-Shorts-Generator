@@ -16,7 +16,7 @@ class Composer:
         try:
             probe = ffmpeg.probe(filepath)
             return float(probe['format']['duration'])
-        except:
+        except Exception:
             return 0.0
 
     def process_scene(self, scene, video_pair, is_avatar=False):
@@ -151,7 +151,7 @@ class Composer:
         if os.path.exists(output_path):
             try:
                 os.remove(output_path)
-            except:
+            except OSError:
                 print("⚠️ Warning: Could not delete old file. It might be open in a player.")
 
         if not video_paths:

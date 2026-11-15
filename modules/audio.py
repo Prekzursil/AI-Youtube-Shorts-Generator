@@ -29,6 +29,7 @@ class AudioEngine:
                 else:
                     print("      ❌ Failed to generate audio after max retries.")
                     raise e # Re-raise error if all retries fail
+        return None # explicit fall-through return (retries<=0)
 
     def get_audio_duration(self, file_path):
         try:
